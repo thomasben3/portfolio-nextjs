@@ -27,16 +27,18 @@ const ContactsPage = async () => {
         <div className="w-full max-w-4xl space-y-6">
 
           {/* Email Card */}
-          <a href="mailto:thomasbensemhoun1@gmail.com">
+          <a href="mailto:thomasbensemhoun1@gmail.com" className='block'>
             <ContactCard title={contactDict("email")} icon={<IoMail color="black" size={32} />}>
               <span className='text-blue-500 text-lg'>thomasbensemhoun1@gmail.com</span>
             </ContactCard>
           </a>
 
           {/* Phone Card */}
-          <ContactCard title={contactDict("phone")} icon={<FaPhone color="black" size={32} />}>
-            <span className='text-blue-500 text-lg'>+212 6 99 99 99 99</span>
-          </ContactCard>
+          <a href="sms:+33674652562" className='block'>
+            <ContactCard title={contactDict("phone")} icon={<FaPhone color="black" size={32} />}>
+              <span className='text-blue-500 text-lg'>+33 6 74 65 25 62</span>
+            </ContactCard>
+          </a>
 
           {/* Social Media Cards */}
           <ContactCard title={contactDict("socialNetworks")} icon={<TbWorld color='black' size={32} />}>
