@@ -1,0 +1,56 @@
+{
+    "language": {
+        "name": "Français",
+        "flag": "🇫🇷"
+    },
+    "home": {
+        "pageDescription": "Un peu sur moi et mon travail",
+        "programmingLanguages": "Langages de programmation",
+        "frameworksAndLibraries": "Frameworks et librairies",
+        "frontend": "Front-end",
+        "backend": "Back-end",
+        "otherTechnologies": "Autres technologies",
+        "projects": "Projets",
+        "students": "Étudiants",
+        "professionals": "Professionnels",
+        "cub3dQuote": "Ce projet réalisé en 2022 est un moteur de ray-casting entièrement réalisé en C.",
+        "transcendenceQuote": "Projet final du tronc commun de 42. Effectué en groupe, il s'agit d'une application web de jeu pong en ligne.",
+        "flutterMobileApp": "Application mobile Flutter",
+        "flutterMobileAppQuote": "Ce projet est une application mobile développée avec Flutter réalisée pour une entreprise de lavage de vitres. C'est une application interne communiquant avec le CRM, permettant aux commerciaux de génerer des contrats et d'organiser leur planning. Cette dernière permet également au personnel technique de gérer les interventions chez les clients.",
+        "CRMWebApp": "Application web CRM",
+        "CRMWebAppQuote": "Ce projet est une application web développée avec Spring Boot (Java) et Vue.js. Il s'agit d'une refonte from scratch d'une application existante. Elle permet de gérer les prospects, clients, contrats, interventions, factures, salaires, etc. Possède également un algorithme visant a optimiser les déplacements des techniciens. Elle est utilisée par l'intégralité de l'entreprise."
+    },
+    "drawer": {
+        "menu": "Menu",
+        "darkMode": "Mode sombre",
+        "language": "Langue",
+        "contact": "Contact",
+        "settings": "Paramètres"
+    },
+    "not-found": {
+        "title": "Page non trouvée",
+        "description": "La page que vous cherchez n'existe pas.",
+        "backToHome": "Retour à l'accueil"
+    },
+    "footer": {
+        "portfolioMadeWith": "Ce portfolio a été réalisé avec",
+        "sourceCodeAvailable": "Code source disponible",
+        "here": "ici"
+    },
+    "documents": {
+        "pageTitle": "Documents",
+        "pageDescription": "Ici vous trouverez quelques documents.",
+        "resume": "Curriculum Vitae",
+        "resumeDescription": "Mon CV contenant mon parcours scolaire, mes expériences professionnelles et mes compétences.",
+        "diploma": "Diplôme",
+        "diplomaDescription": "Mon diplôme certifiant ma réussite au programme 42.",
+        "additionalDocuments": "Documents supplémentaires"
+    },
+    "contact": {
+        "pageTitle": "Contact",
+        "pageDescription": "Voici différentes façons de me contacter.",
+        "email": "Email",
+        "phone": "Téléphone",
+        "socialNetworks": "Réseaux sociaux"
+    }
+}

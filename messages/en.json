@@ -1,0 +1,56 @@
+{
+    "language": {
+        "name": "English",
+        "flag": "🇬🇧"
+    },
+    "home": {
+        "pageDescription": "A little bit about me and my work",
+        "programmingLanguages": "Programming Languages",
+        "frameworksAndLibraries": "Frameworks and Libraries",
+        "frontend": "Front-end",
+        "backend": "Back-end",
+        "otherTechnologies": "Other Technologies",
+        "projects": "Projects",
+        "students": "Students",
+        "professionals": "Professionals",
+        "cub3dQuote": "This project, which I completed in 2022, is a ray-casting engine built entirely in C.",
+        "transcendenceQuote": "Final project for the 42 core curriculum. Carried out in groups, this is a web application for an online pong game.",
+        "flutterMobileApp": "Flutter Mobile Application",
+        "flutterMobileAppQuote": "This project is a mobile application developed with Flutter for a window cleaning company. It is an internal application that communicates with the CRM, allowing sales representatives to generate contracts and organize their schedules. It also enables technical staff to manage on-site interventions for clients.",
+        "CRMWebApp": "CRM Web Application",
+        "CRMWebAppQuote": "This project is a web application developed with Spring Boot (Java) and Vue.js. It is a complete rebuild of an existing application. It allows the management of prospects, clients, contracts, interventions, invoices, salaries, and more. It also includes an algorithm aimed at optimizing technicians' travel routes. The application is used by the entire company."
+    },
+    "drawer": {
+        "menu": "Menu",
+        "darkMode": "Dark mode",
+        "language": "Language",
+        "contact": "Contact",
+        "settings": "Settings"
+    },
+    "not-found": {
+        "title": "Page not found",
+        "description": "The page you are looking for does not exist.",
+        "backToHome": "Back to home"
+    },
+    "footer": {
+        "portfolioMadeWith": "This portfolio was made with",
+        "sourceCodeAvailable": "Source code available",
+        "here": "here"
+    },
+    "documents": {
+        "pageTitle": "Documents",
+        "pageDescription": "Here you will find some of my documents.",
+        "resume": "Resume",
+        "resumeDescription": "My resume containing my education, work experience, and skills.",
+        "diploma": "Diploma",
+        "diplomaDescription": "My diploma certifying my completion of the 42 program.",
+        "additionalDocuments": "Additional Documents"
+    },
+    "contact": {
+        "pageTitle": "Contact",
+        "pageDescription": "Here are different ways to contact me.",
+        "email": "Email",
+        "phone": "Phone",
+        "socialNetworks": "Social Networks"
+    }
+}

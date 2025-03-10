@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: rgb(243, 244, 246);
+  --foreground: black;
+  --foreground-secondary: rgb(128, 128, 128);
+  --drawer-background: rgb(212, 212, 212);
+  --drawer-hover-background: rgb(192, 192, 192);
+}
+
+[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
+  --foreground-secondary: rgb(147, 147, 147);
+  --drawer-background: rgb(26, 26, 26);
+  --drawer-hover-background: rgb(39, 39, 39);
+}
+
+html {
+  background: var(--background) !important;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "OdinRounded";
+  src: url("/fonts/Odin Rounded - Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
