@@ -1,6 +1,6 @@
 import { Button } from '@heroui/button';
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link'
+import Link from 'next/link';
 import GradientTitle from './[lang]/components/GradientTitle';
  
 export default async function NotFound() {

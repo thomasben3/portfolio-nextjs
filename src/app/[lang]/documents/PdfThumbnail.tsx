@@ -20,7 +20,7 @@ const PdfThumbnail = ({ documentSrc }: PdfThumbnailProps) => {
   const [error, setError] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const onLoadError = (error: any) => {
+  const onLoadError = (error: Error) => {
     setError('Error loading PDF: ' + error.message);
   };
 

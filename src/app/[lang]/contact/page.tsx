@@ -4,7 +4,7 @@ import GradientTitle from '../components/GradientTitle';
 import { getTranslations } from 'next-intl/server';
 import ContactCard from './ContactCard';
 import { IoMail } from 'react-icons/io5';
-import { FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
+import { FaLinkedin, FaPhone } from 'react-icons/fa';
 import { TbWorld } from 'react-icons/tb';
 import { AiFillGithub } from 'react-icons/ai';
 

@@ -4,7 +4,7 @@
         "flag": "🇬🇧"
     },
     "home": {
-        "pageDescription": "A little bit about me and my work",
+        "pageDescription": "A little bit about me and my work.",
         "programmingLanguages": "Programming Languages",
         "frameworksAndLibraries": "Frameworks and Libraries",
         "frontend": "Front-end",
@@ -22,10 +22,12 @@
     },
     "drawer": {
         "menu": "Menu",
-        "darkMode": "Dark mode",
-        "language": "Language",
+        "home": "Home",
+        "documents": "Documents",
         "contact": "Contact",
-        "settings": "Settings"
+        "settings": "Settings",
+        "darkMode": "Dark Mode",
+        "language": "Language"
     },
     "not-found": {
         "title": "Page not found",

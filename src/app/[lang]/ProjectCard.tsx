@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 interface ProjectCardProps {
     title: string;
@@ -22,6 +23,16 @@ const ProjectCard = ({ title, description, url, popupImage }: ProjectCardProps) 
   const labelRef = useRef<HTMLParagraphElement>(null);
 
   const [showExpandButton, setShowExpandButton] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const [imageSize, setImageSize] = useState({ width: 1, height: 1 });
+  /**
+   * The reference to the image element.
+   * Used to get the natural width and height of the image. To be used in the aspect ratio of the popup image.
+   * (leaving it manage naturally works but causes next/image to throw a warning)
+  */
+  const imgRef = useRef<HTMLImageElement | null>(null);
+
 
   useEffect(() => {
     if (!labelRef.current) return;
@@ -29,28 +40,42 @@ const ProjectCard = ({ title, description, url, popupImage }: ProjectCardProps) 
     setShowExpandButton(labelRef.current.scrollHeight > labelRef.current.clientHeight);
   }, [labelRef]);
 
-  const [isExpanded, setIsExpanded] = useState(false);
-
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
+  };
+
+
+  const handleImageLoad = () => {
+    if (imgRef.current) {
+      setImageSize({
+        width: imgRef.current.naturalWidth,
+        height: imgRef.current.naturalHeight,
+      });
+    }
   };
 
   return (
     <div className="border-b border-gray-300 py-4">
       <h3 className="text-lg font-semibold text-gray-800">
         <a href={url} className={"relative text-blue-600 group" + (url ? " hover:underline underline-offset-4" : " cursor-not-allowed")}>
-        <div className="absolute left-0 bottom-6 w-64 h-auto rounded-lg shadow-2xl 
-                opacity-0 scale-90 translate-y-2 
-                transition-all duration-300 ease-out 
-                group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
-                pointer-events-none"
-        >
-          {popupImage ? <img
-            src={popupImage}
-            alt={title}
-            className="object-cover rounded-lg"
-          /> : null}
-        </div>
+          {popupImage && <div className="absolute left-0 bottom-6 w-64 rounded-lg shadow-2xl 
+                  opacity-0 scale-90 translate-y-2 
+                  transition-all duration-300 ease-out 
+                  group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0
+                  pointer-events-none"
+               style={{ aspectRatio: `${imageSize.width} / ${imageSize.height}` }}
+          >
+            <Image
+              ref={imgRef}
+              src={popupImage}
+              alt={title}
+              fill
+              sizes="100%"
+              priority
+              onLoad={handleImageLoad}
+              className="rounded-lg"
+            />
+          </div>}
           {title}
         </a>
       </h3>

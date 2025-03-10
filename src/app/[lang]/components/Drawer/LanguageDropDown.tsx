@@ -2,7 +2,7 @@
 
 import { Button } from "@heroui/button";
 import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@heroui/dropdown";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/src/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { setCookie } from "cookies-next";
 
@@ -20,11 +20,9 @@ export default function LanguageDropdown() {
 
     const splittedBasePath = window.location.pathname.split('/').slice(1);
     const baseLocale = splittedBasePath.shift();
-
+    console.log(baseLocale, newLocale);
     if (baseLocale !== newLocale) {
-      const targetPath = `/${newLocale}/${splittedBasePath.join('/')}`
-
-      router.replace(targetPath);
+      router.replace("/" + splittedBasePath.join('/'), {locale: newLocale});
     }
   };
 

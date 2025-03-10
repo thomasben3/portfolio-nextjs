@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes';
 import LanguageDropdown from './LanguageDropDown';
 import { useLocale, useTranslations } from 'next-intl';
 import DrawerTile from './DrawerTile';
-import Link from 'next/link';
+import { Link } from '@/src/i18n/navigation';
 
 
 /**
@@ -74,9 +74,9 @@ const Drawer = () => {
             <h2 className="pl-4 text-xl mb-4">{ drawerDict("menu") }</h2>
             <hr className="border-gray-700" />
             <ul>
-              <Link href={`/${locale}`}><DrawerTile> Acceuil </DrawerTile></Link>
-              <Link href={`/${locale}/documents`}><DrawerTile> Documents </DrawerTile></Link>
-              <Link href={`/${locale}/contact`}><DrawerTile> Contact </DrawerTile></Link>
+              <Link href="/"><DrawerTile>{ drawerDict("home") }</DrawerTile></Link>
+              <Link href="/documents"><DrawerTile>{ drawerDict("documents") }</DrawerTile></Link>
+              <Link href="/contact"><DrawerTile>{ drawerDict("contact") }</DrawerTile></Link>
             </ul>
           </div>
           <div>
