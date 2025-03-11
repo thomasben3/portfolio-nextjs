@@ -27,7 +27,9 @@ const Drawer = () => {
     const isOpen = localStorage.getItem('drawerOpen');
     
     setIsOpen(isOpen === 'true');
-    setIsDarkMode(!storedTheme || storedTheme === 'dark');
+    const needsDarkMode = !storedTheme || storedTheme === 'dark';
+    setIsDarkMode(needsDarkMode);
+    theme.setTheme(needsDarkMode ? 'dark' : 'light');
   }, []);
 
   // Toggle drawer state
