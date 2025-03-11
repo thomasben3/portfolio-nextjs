@@ -5,7 +5,7 @@ import MenuSvg from '../MenuSvg/MenuSvg';
 import { Switch } from '@heroui/switch';
 import { useTheme } from 'next-themes';
 import LanguageDropdown from './LanguageDropDown';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import DrawerTile from './DrawerTile';
 import { Link } from '@/src/i18n/navigation';
 
@@ -21,8 +21,6 @@ const Drawer = () => {
   const theme = useTheme();
 
   const drawerDict = useTranslations("drawer");
-
-  const locale = useLocale();
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
