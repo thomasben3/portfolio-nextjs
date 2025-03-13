@@ -1,13 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import MenuSvg from '../MenuSvg/MenuSvg';
 import { Switch } from '@heroui/switch';
-import { useTheme } from 'next-themes';
 import LanguageDropdown from './LanguageDropDown';
-import { useTranslations } from 'next-intl';
 import DrawerTile from './DrawerTile';
 import { Link } from '@/src/i18n/navigation';
+import { useDrawer } from '@/src/context/DrawerContext';
+import { useTranslations } from 'next-intl';
 
 
 /**
@@ -16,49 +15,9 @@ import { Link } from '@/src/i18n/navigation';
 */
 const Drawer = () => {
 
-  const [isOpen, setIsOpen] = useState<boolean | null>(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const theme = useTheme();
+  const { isOpen, toggleDrawer, closeDrawer, isDarkMode, toggleDarkMode } = useDrawer();
 
   const drawerDict = useTranslations("drawer");
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    const isOpen = localStorage.getItem('drawerOpen');
-    
-    setIsOpen(isOpen === 'true');
-    const needsDarkMode = !storedTheme || storedTheme === 'dark';
-    setIsDarkMode(needsDarkMode);
-    theme.setTheme(needsDarkMode ? 'dark' : 'light');
-  }, []);
-
-  // Toggle drawer state
-  const toggleDrawer = () => {
-    if (isOpen) {
-      localStorage.removeItem('drawerOpen');
-    } else {
-      localStorage.setItem('drawerOpen', 'true');
-    }
-    setIsOpen(!isOpen);
-  };
-
-  const closeDrawer = () => {
-    localStorage.removeItem('drawerOpen');
-    setIsOpen(false);
-  };
-
-  // Toggle dark mode and store preference in localStorage
-  const toggleDarkMode = () => {
-    const themeString = isDarkMode ? 'light' : 'dark';
-    localStorage.setItem('theme', themeString);
-    setIsDarkMode(!isDarkMode);
-    theme.setTheme(themeString);
-  };
-
-  if (isOpen === null) {
-    // Wait for the effect to set the initial state to avoid showing unwanted animations
-    return null;
-  }
 
   return (
     <div className="relative z-50">
@@ -73,7 +32,7 @@ const Drawer = () => {
           <div>
             <h2 className="pl-4 text-xl mb-4">{ drawerDict("menu") }</h2>
             <hr className="border-gray-700" />
-            <ul>
+            <ul onClick={closeDrawer}>
               <Link href="/"><DrawerTile>{ drawerDict("home") }</DrawerTile></Link>
               <Link href="/documents"><DrawerTile>{ drawerDict("documents") }</DrawerTile></Link>
               <Link href="/contact"><DrawerTile>{ drawerDict("contact") }</DrawerTile></Link>
