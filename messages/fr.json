@@ -18,7 +18,7 @@
         "flutterMobileApp": "Application mobile Flutter",
         "flutterMobileAppQuote": "Ce projet est une application mobile développée avec Flutter réalisée pour une entreprise de lavage de vitres. C'est une application interne communiquant avec le CRM, permettant aux commerciaux de génerer des contrats et d'organiser leur planning. Cette dernière permet également au personnel technique de gérer les interventions chez les clients.",
         "CRMWebApp": "Application web CRM",
-        "CRMWebAppQuote": "Ce projet est une application web développée avec Spring Boot (Java) et Vue.js. Il s'agit d'une refonte from scratch d'une application existante. Elle permet de gérer les prospects, clients, contrats, interventions, factures, salaires, etc. Possède également un algorithme visant a optimiser les déplacements des techniciens. Elle est utilisée par l'intégralité de l'entreprise."
+        "CRMWebAppQuote": "Ce projet est une application web développée avec Spring Boot (Java) et JavaScript. Il s'agit d'une refonte from scratch d'une application existante. Elle permet de gérer les prospects, clients, contrats, interventions, factures, salaires, etc. Possède également un algorithme visant a optimiser les déplacements des techniciens. Elle est utilisée par l'intégralité de l'entreprise."
     },
     "drawer": {
         "menu": "Menu",
