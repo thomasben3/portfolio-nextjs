@@ -18,7 +18,7 @@
         "flutterMobileApp": "Flutter Mobile Application",
         "flutterMobileAppQuote": "This project is a mobile application developed with Flutter for a window cleaning company. It is an internal application that communicates with the CRM, allowing sales representatives to generate contracts and organize their schedules. It also enables technical staff to manage on-site interventions for clients.",
         "CRMWebApp": "CRM Web Application",
-        "CRMWebAppQuote": "This project is a web application developed with Spring Boot (Java) and Vue.js. It is a complete rebuild of an existing application. It allows the management of prospects, clients, contracts, interventions, invoices, salaries, and more. It also includes an algorithm aimed at optimizing technicians' travel routes. The application is used by the entire company."
+        "CRMWebAppQuote": "This project is a web application developed with Spring Boot (Java) and JavaScript. It is a complete rebuild of an existing application. It allows the management of prospects, clients, contracts, interventions, invoices, salaries, and more. It also includes an algorithm aimed at optimizing technicians' travel routes. The application is used by the entire company."
     },
     "drawer": {
         "menu": "Menu",
